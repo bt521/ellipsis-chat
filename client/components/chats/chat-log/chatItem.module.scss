@@ -1,0 +1,58 @@
+@use "../../../styles/functions";
+@use "../../../styles/variables";
+
+//message container
+.messageItem {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  max-width: 50%;
+}
+
+.messageItemR {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin: 1em;
+  max-width: 50%;
+}
+
+//message Info and Image
+.messageInfo {
+  display: flex;
+  font-size: functions.em(variables.$text-size);
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+}
+
+.imageContainer {
+  width: 10%;
+  margin: 1em 1em 1em 0em;
+  img {
+    border-radius: 9999px;
+  }
+}
+
+//message Info and Image Reversed
+.messageInfoR {
+  display: flex;
+  font-size: functions.em(variables.$text-size);
+  align-items: center;
+  justify-content: flex-end;
+  height: 50%;
+}
+
+.messageText {
+  background-color: variables.$secondary-color;
+  padding: 1em;
+  font-size: functions.em(variables.$text-size);
+  border-radius: 0em 1em 1em 1em;
+}
+
+.messageTextR {
+  background-color: variables.$user-color;
+  padding: 1em;
+  font-size: functions.em(variables.$text-size);
+  border-radius: 1em 0em 1em 1em;
+}

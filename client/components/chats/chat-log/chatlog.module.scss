@@ -1,0 +1,81 @@
+@use "../../../styles/functions";
+@use "../../../styles/variables";
+.Container {
+  background-color: variables.$primary-color;
+  grid-column: 4/13;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.chatInfo {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid variables.$secondary-color;
+  img {
+    height: 100%;
+    max-width: 10%;
+    padding: 1em;
+    border-radius: 9999px;
+  }
+}
+
+.chatName {
+  font-size: functions.em(variables.$chatName-title);
+}
+
+.chatContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 80%;
+  overflow: auto;
+}
+
+.sendContainer {
+  
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendSubContainer {
+  background-color: variables.$tertiary-color;
+  display: flex;
+  border-radius: 15px;
+  width: 80%;
+}
+.sendInput {
+  font-size: functions.em(16);
+  font-family: inherit;
+  border: none;
+  width: 80%;
+  border-radius: 15px;
+  color: white;
+  padding: 1em;
+  background-color: transparent;
+  outline: none;
+  &::placeholder {
+    color: variables.$secondary-color;
+
+   
+  }
+
+  &:focus::placeholder{
+    color: transparent;
+  }
+ 
+}
+
+.sendControl {
+  width: 10%;
+  padding: 0.5em;
+  background-color: transparent;
+  border: none;
+  font-size: functions.em(variables.$base-size);
+  color: variables.$secondary-color;
+  &:nth-of-type(2) {
+    color: variables.$user-color;
+  }
+}
